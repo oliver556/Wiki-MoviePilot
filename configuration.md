@@ -2,7 +2,7 @@
 title: 配置参考
 description: 所有支持的配置项说明
 published: true
-date: 2024-06-17T16:21:51.345Z
+date: 2024-06-17T16:41:45.841Z
 tags: 
 editor: markdown
 dateCreated: 2024-06-17T16:17:57.352Z
@@ -52,4 +52,17 @@ dateCreated: 2024-06-17T16:17:57.352Z
 |   discfan    |      `DISCFAN_UID`：用户ID<br/>`DISCFAN_PASSKEY`：密钥      |
 
 # 环境变量 / 配置文件
+
+配置文件名：`app.env`，放配置文件根目录，点击 [此处](https://raw.githubusercontent.com/jxxghp/MoviePilot/main/config/app.env) 可下载模板。
+
+- **❗SUPERUSER：** 超级管理员用户名，默认 `admin`，安装后使用该用户登录后台管理界面，**注意：启动一次后再次修改该值不会生效，除非删除数据库文件！**
+- **❗API_TOKEN：** API 密钥，默认 `moviepilot`，在媒体服务器 Webhook、微信回调等地址配置中需要加上 `?token=` 该值，建议修改为复杂字符串
+- **BIG_MEMORY_MODE：** 大内存模式，默认为 `false`，开启后会增加缓存数量，占用更多的内存，但响应速度会更快
+- **DOH_ENABLE：** DNS over HTTPS 开关，`true` / `false`，默认 `true`，开启后会使用 DOH 对 api.themoviedb.org 等域名进行解析，以减少被 DNS 污染的情况，提升网络连通性
+- **META_CACHE_EXPIRE：** 元数据识别缓存过期时间（小时），数字型，不配置或者配置为 0 时使用系统默认（大内存模式为 7 天，否则为 3 天），调大该值可减少 themoviedb 的访问次数
+- **GITHUB_TOKEN：** Github token，提高自动更新、插件安装等请求 Github Api 的限流阈值，格式：ghp_****
+- **GITHUB_PROXY：** Github 代理地址，用于加速版本及插件升级安装，格式：`https://mirror.ghproxy.com/`
+- **DEV:** 开发者模式，`true` / `false`，默认 `false`，仅用于本地开发使用，开启后会暂停所有定时任务，且插件代码文件的修改无需重启会自动重载生效
+- **AUTO_UPDATE_RESOURCE**：启动时自动检测和更新资源包（站点索引及认证等），`true` / `false`，默认 `true`，需要能正常连接 Github，仅支持 Docker 镜像
+---
 
