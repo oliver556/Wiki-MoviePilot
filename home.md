@@ -2,21 +2,17 @@
 title: 开始
 description: 
 published: true
-date: 2024-06-17T05:59:34.762Z
+date: 2024-06-18T04:01:36.777Z
 tags: 
 editor: markdown
 dateCreated: 2024-06-16T18:36:36.903Z
 ---
 
 > MoviePilot 基于 NAStool 部分代码重新设计，聚焦自动化核心需求，减少问题同时更易于扩展和维护。
-**项目地址：** https://github.com/jxxghp/MoviePilot 、https://github.com/jxxghp/MoviePilot-Frontend 、https://github.com/jxxghp/MoviePilot-Plugins 、https://github.com/jxxghp/MoviePilot-Resources
 **发布频道：** https://t.me/moviepilot_channel
 {.is-success}
 
-> 此Wiki与 https://github.com/jxxghp/MoviePilot-Wiki 保持同步。
-{.is-success}
-
-> 请勿在**任何国内平台**发布或引用此 wiki 任何相关内容，请尽量避免在国内公共场合提及`MoviePilot`全称，如确实有需要请使用简称：`MP`。
+> 请勿在**任何国内平台**发布或引用此 wiki 任何相关内容，请尽量避免在国内公共场合提及`MoviePilot`全称，如确实有需要请使用简称：**`MP`**。
 {.is-danger}
 
 # 安装
