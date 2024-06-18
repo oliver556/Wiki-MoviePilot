@@ -2,7 +2,7 @@
 title: 升级
 description: 自动升级新版本
 published: true
-date: 2024-06-18T04:45:14.076Z
+date: 2024-06-18T04:46:33.556Z
 tags: 
 editor: markdown
 dateCreated: 2024-06-18T04:41:54.344Z
@@ -45,7 +45,7 @@ docker-compose up --force-recreate -d
 docker pull jxxghp/movie-pilot:latest
 ```
 
-不同的docker管理器重置容器的操作方式不同，`群晖docker` 可直接在右键菜单中找到 `重置` 选项；`portainer` 为在容器详情中点击 `重建`；在正常映射了 `/config` 目录的前提下，重置/重建容器不会导致配置丢失。
+不同的 docker 管理器重置容器的操作方式不同，`群晖 docker` 可直接在右键菜单中找到 `重置` 选项；`portainer` 为在容器详情中点击 `重建`；在正常映射了 `/config` 目录的前提下，重置/重建容器不会导致配置丢失。
 
 ### Synology套件 <i class="mdi mdi-linux"></i>
 
