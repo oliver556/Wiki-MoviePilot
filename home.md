@@ -2,7 +2,7 @@
 title: 开始
 description: 
 published: true
-date: 2024-06-18T04:56:53.373Z
+date: 2024-06-18T06:34:47.432Z
 tags: 
 editor: markdown
 dateCreated: 2024-06-16T18:36:36.903Z
@@ -60,4 +60,8 @@ MoviePilot 支持 Docker、Windows 和群辉平台，参考下述说明安排和
 
 ![dashboard.png](/dashboard.png)
 
+![discover.jpg](/discover.jpg)
 
+![subscribe.jpg](/subscribe.jpg)
+
+![plugin.jpg](/plugin.jpg)
