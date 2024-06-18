@@ -2,7 +2,7 @@
 title: 故障排除
 description: 常见问题及解决方案
 published: true
-date: 2024-06-18T06:49:29.717Z
+date: 2024-06-18T06:51:20.687Z
 tags: 
 editor: markdown
 dateCreated: 2024-06-18T06:37:11.310Z
@@ -41,3 +41,5 @@ sudo sysctl -p
 # 日志提示站点认证失败 / 软件界面没有站点管理
 
 1. 查看环境变量是否配置好，例如 `iyuu` 需要同时配置 `AUTH_SITE`、`IYUU_SIGN` 两个变量，参考 [配置参考](/configuration) 说明。
+2. 检查站点连接性，一般可能是代理的配置问题，可以尝试调整代理软件的规则，或者给 MoviePilot 的容器配置 `https_proxy` 和 `no_proxy` 变量。参考 [配置参考](/configuration) 说明。
+3. 仅有 README 列表内的站点可以认证，其他站点无法认。
