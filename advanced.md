@@ -2,7 +2,7 @@
 title: 进阶
 description: 词表、分类策略等高阶使用方法
 published: true
-date: 2024-06-18T06:31:21.123Z
+date: 2024-06-18T06:32:25.049Z
 tags: 
 editor: markdown
 dateCreated: 2024-06-18T06:31:21.123Z
@@ -21,6 +21,8 @@ dateCreated: 2024-06-18T06:31:21.123Z
 ## 示例
 
 **优先特效字幕、中文字幕，排除杜比和蓝光原盘，仅限 4K 和 1080P，1080P 优先**：
+
+![subscribe_rule.jpg](/subscribe_rule.jpg)
 
 ```
  SPECSUB & !BLU & !DOLBY & 1080P > CNSUB & !BLU & !DOLBY & 1080P > SPECSUB & BLU & !DOLBY & 4K > CNSUB & !BLU & !DOLBY & 4K  
