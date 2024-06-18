@@ -2,7 +2,7 @@
 title: 故障排除
 description: 常见问题及解决方案
 published: true
-date: 2024-06-18T06:51:20.687Z
+date: 2024-06-18T06:55:00.992Z
 tags: 
 editor: markdown
 dateCreated: 2024-06-18T06:37:11.310Z
@@ -42,4 +42,16 @@ sudo sysctl -p
 
 1. 查看环境变量是否配置好，例如 `iyuu` 需要同时配置 `AUTH_SITE`、`IYUU_SIGN` 两个变量，参考 [配置参考](/configuration) 说明。
 2. 检查站点连接性，一般可能是代理的配置问题，可以尝试调整代理软件的规则，或者给 MoviePilot 的容器配置 `https_proxy` 和 `no_proxy` 变量。参考 [配置参考](/configuration) 说明。
-3. 仅有 README 列表内的站点可以认证，其他站点无法认。
+3. 仅有 README 列表内的站点可以认证，其他站点无法认。参考 [站点](/site) 说明。
+4. iyuu 有时候会存在连接问题，可以尝试同时添加多个认证的参数避免出现无法认证的问题。
+5. uid 不是站点的昵称，可在站点用户中心查看。passkey 也不是账号的密码，需要在站点的控制面板中查看。
+6. 直接复制 passkey 可能会在末尾多一个空格，可以检查一下。
+7. 可以同时配置多个认证站点，当站点连接不上时可以顺位使用下一个站点认证，应使用 “,” 进行分隔，例如 iyuu,audiences
+8. 无论是 windows 版本还是 docker 版本，认证变量都需要写在环境变量中。
+
+# 为什么 CookieCloud 一直同步失败？
+
+1. 如果使用的是公共的 CookieCloud 服务端，需要检查一下容器内部是否能够连接上服务端。
+2. 如果是本地自建的 CookieCloud，浏览器可以正常连接而 MoviePilot 无法连接，一般可能是因为代理将本地地址也一并代理了。可以将代理配置为规则代理，并将本地地址设定为直连，也可以在环境变量中添加 `no_proxy=localhost,127.0.0.0/8,10.0.0.0/8,172.16.0.0/12,192.168.0.0/16`，再进行尝试。
+3. CookieCloud 的地址最后不要有 `/`，否则无法正常连接。正确的地址应该为 `http://192.168.31.2:8088` 而不是 `http://192.168.31.2:8088/`。
+4. 在 1.7.2 版本之后，MoviePilot 内置了 CookieCloud 的客户端，可以尝试使用内置的客户端进行同步，需要在 MoviePilot 填的地址为`http://localhost:3000/cookiecloud`，浏览器连接时应当填写 `http://mp的ip:端口/cookiecloud`。
