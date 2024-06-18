@@ -2,7 +2,7 @@
 title: 环境准备
 description: 安装前的准备工作
 published: true
-date: 2024-06-17T06:02:00.742Z
+date: 2024-06-18T04:32:47.091Z
 tags: 
 editor: markdown
 dateCreated: 2024-06-17T05:56:00.011Z
@@ -85,5 +85,5 @@ docker run -d --restart=always --name="portainer" -p 9000:9000 -v /var/run/docke
 ```
 
 ### Overseerr/Jellyseerr
-如果你希望将 MoviePilot 的自动化媒体管理能力开放给多个人使用，同时具有用户提交订阅申请与集中审批的功能，可以安装 `Overseerr`/`Jellyseerr`来配合实现更好的选片和申请审批使用体验。MoviePilot 通过模拟 `Radarr` 和 `Sonarr` 的 Api 实现无缝集成，`Overseerr`/`Jellyseerr`负责选片和用户权限管理，MoviePilot 负责订阅、下载和整理。参考下图：
+如果你希望将 MoviePilot 的自动化媒体管理能力开放给多个人使用，同时具有用户提交订阅申请与集中审批的功能，可以安装 `Overseerr` / `Jellyseerr`来配合实现更好的选片和申请审批使用体验。MoviePilot 通过模拟 `Radarr` 和 `Sonarr` 的 Api 实现无缝集成，`Overseerr` / `Jellyseerr`负责选片和用户权限管理，MoviePilot 负责订阅、下载和整理。参考下图：
 
